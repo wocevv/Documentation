@@ -2,7 +2,7 @@
 
 # Notulen meeting 14 maart 2023
 
--Data: welke data verwachten ze?
+- Data: welke data verwachten ze?
   - Lijn diagram: hoeveel producten op specifieke datum aangemaakt zijn.
 Filteren op attribute.
 
