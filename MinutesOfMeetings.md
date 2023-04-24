@@ -1,6 +1,6 @@
 
 
-Notulen meeting 14 maart 2023
+# Notulen meeting 14 maart 2023
 
 Data: welke data verwachten ze?
 Lijn diagram: hoeveel producten op specifieke datum aangemaakt zijn.
@@ -24,7 +24,7 @@ Figma (voor design)
 Als we daarmee werken kunnen we feedback krijgen van de designer over bijv. UX.
 
 
-notities 18-04-2023 Sprint oplevering 2
+# notities 18-04-2023 Sprint oplevering 2
 
 meer prio saving widgets en high-res design
 
