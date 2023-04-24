@@ -3,14 +3,14 @@
 # Notulen meeting 14 maart 2023
 
 -Data: welke data verwachten ze?
- - Lijn diagram: hoeveel producten op specifieke datum aangemaakt zijn.
+  - Lijn diagram: hoeveel producten op specifieke datum aangemaakt zijn.
 Filteren op attribute.
 
 - Welke type widgets?
- - Standaard widgets die je normaal op een dashboard zou zien; verschillende charts is goed.
+  - Standaard widgets die je normaal op een dashboard zou zien; verschillende charts is goed.
 
 - In welke zin customizable?
- - Titel
+  - Titel
 Kleur, grootte is niet belangrijk, data moet customizable zijn (bijv. dingen omwisselen in grafiek).
 
 - Elke user moet zijn eigen dashboard hebben, authenticatie is niet een prioriteit
@@ -20,8 +20,8 @@ Functionaliteit > user identificatie
 
 
 - Tips:
- - Figma (voor design)
- - Als we daarmee werken kunnen we feedback krijgen van de designer over bijv. UX.
+  - Figma (voor design)
+  - Als we daarmee werken kunnen we feedback krijgen van de designer over bijv. UX.
 
 
 # notities 18-04-2023 Sprint oplevering 2
