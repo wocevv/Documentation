@@ -1,4 +1,4 @@
-# Evvision Documentation
+# Documentation
 Below you can find a table of content of all documentation.
 
 ## Documentation Contents
