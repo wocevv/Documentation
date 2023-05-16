@@ -1,10 +1,8 @@
 ## Sprint 3 (19/03/2023 - 16/05/2023)
 ### Goals
-- As an employee of World of Content, I want my widget to be filled with product data from our database.
-- As an employee of World of Content, I want a pop-up when I add a widget so that I can customize it to my needs.
-- Low-res wireframe.
-- Use Jira
-- Working legend
+- X-axis & Y-axis customizability 
+- High-ress Design
+
 
 ## Retrospective 
 Negative
