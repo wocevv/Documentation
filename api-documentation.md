@@ -1,4 +1,4 @@
-## Api documentation
+# Api documentation
 For our back-end we have made the decision to use a .NET Core REST API. This document will provide an overview of the endpoints used by our API aswell as briefly explain what a REST APi entails. 
 
 ## What is a REST API?
