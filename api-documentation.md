@@ -1,4 +1,4 @@
-For our back-end we have made the decision to use a .NET REST API. This document will provide an overview of the endpoints used by our API aswell as briefly explain what a REST APi entails. 
+For our back-end we have made the decision to use a .NET Core REST API. This document will provide an overview of the endpoints used by our API aswell as briefly explain what a REST APi entails. 
 
 # What is a REST API?
 A REST API (Representational State Transfer Application Programming Interface) is a web service that enables interaction between different software systems over the internet. It follows the principles of REST, which is an architectural style for designing networked applications.
