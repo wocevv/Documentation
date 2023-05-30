@@ -38,3 +38,6 @@ Within our group we all have the same amount of 'power'. Every sprint we have a 
 We also communicate with all the changes we make so that it wont cause errors. Like deleting branches or editing interfaces.
 
 4.1 If someone wants to change the interfaces or delete a branch this first gets communicated with the team so no relevant code or documents get lost.
+
+ # business plan
+business plan The goal of our application is to make data visualisation easier for different companies. This is done by application that lest you create widgets with the data u wanna visualise for example the time the products in albert Heijn were last updated. To make it really easy to manage the data u can create a dashboard with all different kind of widgets to your personal needs. So in summary our application will make it much easier to manage and visualise alot of data.
