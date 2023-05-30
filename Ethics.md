@@ -1,6 +1,6 @@
 # Ethics
 
-we have used the acm code of ethics to analyse the cultural differences and ethics in our project. The numbers in front of the text wil refer to the acm code of ethics document.
+we have used the acm code of ethics to analyse the cultural differences and ethics in our project. The numbers in front of the text wil refer to the acm code of ethics document. [acm code of ethics](https://www.acm.org/code-of-ethics)
 
 
 1.1
