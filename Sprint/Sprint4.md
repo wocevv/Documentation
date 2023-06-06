@@ -1,4 +1,4 @@
-## Sprint 3 (16/05/2023 - 06/06/2023)
+## Sprint 4 (16/05/2023 - 06/06/2023)
 ### Goals
 - Bug fixes 
 - Design of the website
