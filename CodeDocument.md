@@ -5,7 +5,7 @@ They will be seperated at first but further down in the document I will describe
 ## Front-End
 In our front-end we use Vue.js and mostly use it to create graphs and communicate to the back-end. 
 
-### The making of Graphs
+### Graph components
 We started with importing the necessary dependencies:
 ```vue
     import { Bar } from 'vue-chartjs'
@@ -131,4 +131,13 @@ The methods property contains the methods used within the current component. Met
 The updateChartOptions method updates the chartOptions property based on the provided testValue. It determines the orientation of the chart and uptdates the corresponding options.
 The updateChartData methond updates the chartData property based on the provided widgetdata. It extracts the labels and data values from the prop and updates the corresponding properties of the chartData object.
 
+### How to use Graph components
+
+### Call the API
+
 ## Back-End 
+
+### API Endpoint
+To see more in depth documentation about our API End-points, see [this](https://github.com/wocevv/Documentation/blob/main/api-documentation.md) page
+
+### Queries
