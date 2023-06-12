@@ -4,6 +4,9 @@ They will be separated at first but further down in the document I will describe
 
 ##### Table of Contents  
 - [Front-End](#front-end)  
+    - [Graph components](#graph-components)
+    - [How to use Graph components](#how-to-use-graph-components)
+    - [Call the API](#call-the-api)
 - [Back-End](#back-end) 
 
 ## Front-End
