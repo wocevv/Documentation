@@ -1,9 +1,9 @@
 # Api documentation
-For our back-end we have made the decision to use a .NET Core REST API. This document will provide an overview of the endpoints used by our API aswell as briefly explain what a REST APi entails. 
+For our back-end we have made the decision to use a .NET Core REST API. This document will provide an overview of the endpoints used by our API aswell as briefly explain what a REST API entails. 
 
 ## What is a REST API?
 A REST API (Representational State Transfer Application Programming Interface) is a web service that enables interaction between different software systems over the internet. It follows the principles of REST, which is an architectural style for designing networked applications.
-The concept behind a REST API is the representation of resources. Resources can be any kind of data or information that the API provides access to, such as user profiles, product listings, or blog posts.  REST APIs use the standard HTTP methods to communicate: 
+The concept behind a REST API is the representation of resources. Resources can be any kind of data or information that the API provides access to, such as user profiles, product listings, or blog posts.  REST API's use the standard HTTP methods to communicate: 
 1.	GET:
 Retrieves a representation of a resource or a collection of resources. It is used for reading or fetching data from the API.
 
