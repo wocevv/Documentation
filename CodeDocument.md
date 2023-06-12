@@ -4,7 +4,7 @@ They will be separated at first but further down in the document I will describe
 
 ##### Table of Contents  
 - [Front-End](#front-end)  
-    - [Graph components](#graph-components)
+    - [Graph component](#graph-component)
     - [How to use Graph components](#how-to-use-graph-components)
     - [Call the API](#call-the-api)
 - [Back-End](#back-end) 
@@ -14,7 +14,7 @@ They will be separated at first but further down in the document I will describe
 ## Front-End
 In our front-end we use Vue.js and mostly use it to create graphs and communicate to the back-end. 
 
-### Graph components
+### Graph component
 We started with importing the necessary dependencies:
 ```vue
     import { Bar } from 'vue-chartjs'
