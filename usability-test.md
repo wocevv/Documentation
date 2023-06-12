@@ -1,3 +1,4 @@
+#Usability test
 Creating widgets is the main purpose of our project. The purpose of the tests we let people make was to see them go through the flow of creating a widget. 
 We gave the testers an assignment and recorded the screen to follow the movement. During the test we took some notes on their process and some issues we saw ourselves. 
 
