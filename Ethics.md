@@ -41,3 +41,32 @@ We also communicate with all the changes we make so that it wont cause errors. L
 
  # business plan
 business plan The goal of our application is to make data visualisation easier for different companies. This is done by application that lest you create widgets with the data u wanna visualise for example the time the products in albert Heijn were last updated. To make it really easy to manage the data u can create a dashboard with all different kind of widgets to your personal needs. So in summary our application will make it much easier to manage and visualise alot of data.
+
+Quick scan of tict
+
+- Human Values: 
+ - It creates an easier way for companies to manage and visualise their data.
+
+- Transparency: 
+ - there are a lot of documents written for the user so everyone can understand and use the software. For example, there is an introduction with an explanation what the software is and why it is written. Also, there is a user friendly front-end which makes it easy to navigate in.
+
+- Impact on Society: 
+ - The problem our software solves is the visualisation of data for companies. Instead of a lot of employees that need to check data and keep checking it you can make a dashboard with graphs that can visualise it a lot faster and easier.
+
+- Stakeholders: 
+ - This software is primarily written for companies with a lot of data.
+
+- Sustainability:
+ -  We implement features that allow users to efficiently manage and analyse their data, reducing the need for excessive processing and energy use. We have also created a user-friendly front-end which helps customers efficiently visualise data, this makes the time and energy required for the data exploration faster.
+- Hateful and criminal actors: 
+- Data: 
+ - We have looked into the data and checked if any was incomplete or empty. When one is empty or incomplete like every item was added at the same day this has been communicated to the stakeholders.
+
+- Future: 
+ - This software can serve unlimited amounts of people if the database has the room for it. In the future we can make a specialised configuration for companies, so it takes less time and energy for companies to have a dashboard.
+
+- Privacy: 
+ - We have a lot of data that is personal it registers companies and brands data which is private. You also need to have an account to make use of the software, so we have to store your personal data.
+- Inclusivity:
+ -  there is no bias in the data since it is about products there is no discussion about the values of the data. There is an bias in the front-end design since we personally think its user-friendly and we have only done 3 usability tests with people from one location so there is no diversity in the tests.
+
