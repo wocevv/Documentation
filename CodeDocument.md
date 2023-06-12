@@ -1,6 +1,6 @@
 # Code Explanation
 In this document i will describe the highlights of our code and try to make clear what they do. We have two parts to the project. A front-end and a back-end. 
-They will be seperated at first but further down in the document I will describe how they work together.
+They will be separated at first but further down in the document I will describe how they work together.
 
 ## Front-End
 In our front-end we use Vue.js and mostly use it to create graphs and communicate to the back-end. 
@@ -32,7 +32,7 @@ With name you describe the name of the component. This is used internally by Vue
 ```vue
         components: { Bar },
 ```
-The components property defines the props that that the current component uses. In this case is uses the Bar component inported from from Chart.js. It is responsible for rendering the bar chart.
+The components property defines the props that the current component uses. In this case it uses the Bar component inported from from Chart.js. It is responsible for rendering the bar chart.
 
 <br/>**Props:**
 ```vue
@@ -129,6 +129,6 @@ For both widgetdata and testValue that means that they update the chart's option
 ```
 The methods property contains the methods used within the current component. Methods are functions that can be called within the component's context. 
 The updateChartOptions method updates the chartOptions property based on the provided testValue. It determines the orientation of the chart and uptdates the corresponding options.
-The updateChartData methond updates the chartData property based on the provided widgetdata. It extracts the labels and data values from the prop and updates the corresponding properties of the chartData object.
+The updateChartData method updates the chartData property based on the provided widgetdata. It extracts the labels and data values from the prop and updates the corresponding properties of the chartData object.
 
 ## Back-End 
