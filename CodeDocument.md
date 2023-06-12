@@ -8,6 +8,8 @@ They will be separated at first but further down in the document I will describe
     - [How to use Graph components](#how-to-use-graph-components)
     - [Call the API](#call-the-api)
 - [Back-End](#back-end) 
+    - [API Endpoint](#api-endpoint)
+    - [Queries](#queries)
 
 ## Front-End
 In our front-end we use Vue.js and mostly use it to create graphs and communicate to the back-end. 
