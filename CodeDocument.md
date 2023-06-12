@@ -2,6 +2,10 @@
 In this document i will describe the highlights of our code and try to make clear what they do. We have two parts to the project. A front-end and a back-end. 
 They will be separated at first but further down in the document I will describe how they work together.
 
+##### Table of Contents  
+- [Front-End](#front-end)  
+- [Back-End](#back-end) 
+
 ## Front-End
 In our front-end we use Vue.js and mostly use it to create graphs and communicate to the back-end. 
 
@@ -138,6 +142,6 @@ The updateChartData method updates the chartData property based on the provided 
 ## Back-End 
 
 ### API Endpoint
-To see more in depth documentation about our API End-points, see [this](https://github.com/wocevv/Documentation/blob/main/api-documentation.md) page
+To see more in depth documentation about our API End-points, see [this](https://github.com/wocevv/Documentation/blob/main/api-documentation.md) page.
 
 ### Queries
