@@ -1,5 +1,5 @@
 # C4 Model
-We have made the c4 model as we expect the system to look when it is finished.
+We have created the C4 model to illustrate how we expect the system to look when it is finished."
 ## Context diagram
 Down here we have made a context diagram. It represents the system as a box surrounded by the user and other systems that interact with it. The context diagram contains a front/back-end and an external service Auth0. With Auth0 you can create an account and login, we also want to secure our api with it.
 
