@@ -150,53 +150,23 @@ Then when we want to use this component, in the ```html <template> ``` part of t
 ```html
         <bargraphtest :widgetdata="widgetdata" :testValue="TestValue"></bargraphtest>
 ```
+Widgetdata is a ```vue const widgetdata = ref([]) ``` initiated at the top of the file. Its value is filled with the response value of an API.
 
 ### Call the API
+To get the data for a graph you need to call an API that will get you the right data. For the dropdowns where you can select what data the graph will show are also API calls.
+The ones for the dropdowns are all getters while the ones for getting the right data are all posts.
+Lets say we want to get all the properties to go into the dropdown to select all the brand groupby values, you can call the following API like this:
 ```vue
-methods: {
-            async getData(value) {      
-                if (value === 'Products') {
-                    const res = await fetch("https://localhost:5001/api/widget/Datamodel");
-                    const finalRes = await res.json();
-                    this.ListItems = finalRes;
-
-                    const res2 = await fetch("https://localhost:5001/api/widget/Brands");
-                    const finalRes2 = await res2.json();
-                    Brands.value = finalRes2
-                    this.ListItems = this.ListItems.concat(finalRes2);
-                    const resproducts = await fetch("https://localhost:5001/api/Widget/Products/Properties");
-                    const finalResproducts = await resproducts.json();
-                    this.Listgroupby = finalResproducts;
-                    listgroupby.value = finalResproducts;
-                  
-                }
-                else if (value === "Brands") {
                     const res = await fetch("https://localhost:5001/api/Widget/Brands/Properties");
                     const finalRes = await res.json();
                     this.Listgroupby = finalRes
                     listgroupby.value = finalRes;
-                }
-                else if (value === 'Datamodels') {
-                    const res = await fetch("https://localhost:5001/api/Widget/Datamodels/Properties");
-                    const finalRes = await res.json();
-                    this.Listgroupby = finalRes
-                    listgroupby.value = finalRes;
-                }
-                else {
-                    listgroupby.value = []
-                    this.ListItems = []
-                }
-            },
-            Gonext(id) {
-                myString = id   
-                router.push({ name: 'test', params: { myString } })             
-            },
-        },
 ```
+This way all the brand properties go into the right array.
+
+The API call for getting the data to show in a graph looks a bit different. Like this:
 ```vue
-        for (let i = 0; i < listgroupby.value.length; i++) {
-            if (xaxis.value === listgroupby.value[i]) {
-                const queryParams = new URLSearchParams(requestData);
+        const queryParams = new URLSearchParams(requestData);
                 axios
                     .post(`https://localhost:5001/api/widget/ApiModelTest2?${queryParams.toString()}`)
                     .then((response) => {
@@ -207,30 +177,48 @@ methods: {
                     .catch((error) => {
                         console.error(error);
                     });
-                    break
-            } else if (i === listgroupby.value.length - 1 && xaxis.value !== listgroupby.value[i]){
-                // Modify the requestData object for the else condition
-                requestData.DataGrouper = ShowWhatData.value;
-                requestData.DataAction = xaxis.value;
-                console.log("2")
-                const queryParams = new URLSearchParams(requestData);
-                axios
-                    .post(`https://localhost:5001/api/widget/ApiModelTest2?${queryParams.toString()}`)
-                    .then((response) => {
-                        widgetdata.value = response.data;
-                        console.log(widgetdata);
-                        TestValue = 2
-                    })
-                    .catch((error) => {
-                        console.error(error);
-                    });
-
-            }
-        }
 ```
+https://localhost:5001/api/widget/ApiModelTest2 is the endpoint to the API where you get the data from that fills the graph.
+With ```vue const queryParams = new URLSearchParams(requestData); ``` you create the searchparam with the data revieved from the dropdowns.
+The response of the API is where the returned data is recieved. You can see we fill the value of widgetdata with the data in the response.
+
 ## Back-End 
 
 ### API Endpoint
 To see more in depth documentation about our API End-points, see [this](https://github.com/wocevv/Documentation/blob/main/api-documentation.md) page.
 
 ### Queries
+For the connection to the database we have decided to use raw SQL queries. We use a postgresql database so some functions may be only for postgresql.
+These are all the Database methods we have:
+
+- Get*PerGrouper    X2
+    - GetDatamodelsPerGrouper
+    - GetBrandsPerGrouper
+    - GetProductsPerGrouper
+- ReadAllPropertyNames
+- ReadAll*Names
+    - ReadAllDatamodelNames
+    - ReadAllBrandNames
+- ReadAllProducts
+
+For the Get*perGrouper method we needed two variants, one for grouping by date and the other for the other possibilities. We did this because the date query lhas a different way of grouping and delivers datetime variables as a result.
+These are the different queries for these methods:
+```c#
+string.Format("SELECT DATE_TRUNC(@dateGrouper,{0}) AS created_to_specificDate, {1}(id) AS count FROM products WHERE {0} IS NOT NULL AND {2}_id = @datacategoryid AND created_at BETWEEN @startdate AND @enddate GROUP BY DATE_TRUNC(@dateGrouper,{0})", Grouper, action, lowerDataCategory);
+```
+In this one we have the date has the ``` DATE_TRUNC()``` funtion. This function is used to select sertain parts of a date. It uses 2 parametes, in the first you define what kind of timestamp(millisencond, month, year, etc) and second you select what date you to use it on, the way we did it it is selected on the column you have selcted(created_at, deleted_at, etc). We group by this item so you can get the first to latest in order.
+
+```c#
+string.Format("SELECT {0}, {1}(id) FROM products WHERE {0} IS NOT NULL AND {2}_id = @datacategoryid AND created_at BETWEEN @startdate AND @enddate GROUP BY {0}", groupColumnName, action, lowerDataCategory);
+```
+You can also group by something that is not a date. To be able to do this we have this second query. it selects one of the other columns to group by.
+
+In both queries we use the string.format(). This we do so that we can call direct columns in the queries. When you add to a query with a parameter like below it is added as a variable. This way a column cant be adressed. 
+```c#
+    cmd.Parameters.AddWithValue("datacategoryid", DataCategoryID); 
+``` 
+The string.format() takes multiple parameters, the first being the query and the ones after being the values you want in the query. To add these values to the query you define them with {} and a number to the corresponding parameter. This starts at 0 and continues opwards. 
+
+
+
+
