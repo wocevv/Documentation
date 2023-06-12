@@ -141,9 +141,93 @@ The updateChartOptions method updates the chartOptions property based on the pro
 The updateChartData method updates the chartData property based on the provided widgetdata. It extracts the labels and data values from the prop and updates the corresponding properties of the chartData object.
 
 ### How to use Graph components
+First import the component you want to use. We want to use the bargraph so we inport it like:
+```vue
+    import bargraphtest from '../../src/components/Bargraph.vue'
+```
+
+Then when we want to use this component, in the ```html <template> ``` part of the page we use a HTML object with the import like this:
+```html
+        <bargraphtest :widgetdata="widgetdata" :testValue="TestValue"></bargraphtest>
+```
 
 ### Call the API
+```vue
+methods: {
+            async getData(value) {      
+                if (value === 'Products') {
+                    const res = await fetch("https://localhost:5001/api/widget/Datamodel");
+                    const finalRes = await res.json();
+                    this.ListItems = finalRes;
 
+                    const res2 = await fetch("https://localhost:5001/api/widget/Brands");
+                    const finalRes2 = await res2.json();
+                    Brands.value = finalRes2
+                    this.ListItems = this.ListItems.concat(finalRes2);
+                    const resproducts = await fetch("https://localhost:5001/api/Widget/Products/Properties");
+                    const finalResproducts = await resproducts.json();
+                    this.Listgroupby = finalResproducts;
+                    listgroupby.value = finalResproducts;
+                  
+                }
+                else if (value === "Brands") {
+                    const res = await fetch("https://localhost:5001/api/Widget/Brands/Properties");
+                    const finalRes = await res.json();
+                    this.Listgroupby = finalRes
+                    listgroupby.value = finalRes;
+                }
+                else if (value === 'Datamodels') {
+                    const res = await fetch("https://localhost:5001/api/Widget/Datamodels/Properties");
+                    const finalRes = await res.json();
+                    this.Listgroupby = finalRes
+                    listgroupby.value = finalRes;
+                }
+                else {
+                    listgroupby.value = []
+                    this.ListItems = []
+                }
+            },
+            Gonext(id) {
+                myString = id   
+                router.push({ name: 'test', params: { myString } })             
+            },
+        },
+```
+```vue
+        for (let i = 0; i < listgroupby.value.length; i++) {
+            if (xaxis.value === listgroupby.value[i]) {
+                const queryParams = new URLSearchParams(requestData);
+                axios
+                    .post(`https://localhost:5001/api/widget/ApiModelTest2?${queryParams.toString()}`)
+                    .then((response) => {
+                        widgetdata.value = response.data;
+                        console.log(widgetdata);
+                        TestValue = 1
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+                    break
+            } else if (i === listgroupby.value.length - 1 && xaxis.value !== listgroupby.value[i]){
+                // Modify the requestData object for the else condition
+                requestData.DataGrouper = ShowWhatData.value;
+                requestData.DataAction = xaxis.value;
+                console.log("2")
+                const queryParams = new URLSearchParams(requestData);
+                axios
+                    .post(`https://localhost:5001/api/widget/ApiModelTest2?${queryParams.toString()}`)
+                    .then((response) => {
+                        widgetdata.value = response.data;
+                        console.log(widgetdata);
+                        TestValue = 2
+                    })
+                    .catch((error) => {
+                        console.error(error);
+                    });
+
+            }
+        }
+```
 ## Back-End 
 
 ### API Endpoint
