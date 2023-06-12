@@ -21,20 +21,20 @@ After importing the dependencies, we need to register the components and plugins
 Here we tell the code what parts of ChartJS we want to use.
 
 Next come the component properties. 
-There are many different properties for the Vue component. The ones we use are:
-**Name:**
+There are many different properties for the Vue component. The ones we use are:<br/>
+<br/>**Name:**
 ```vue
         name: 'BarChart',
 ```
 With name you describe the name of the component. This is used internally by Vue for debugging and defining components.
 
-**Components:**
+<br/>**Components:**
 ```vue
         components: { Bar },
 ```
 The components property defines the props that that the current component uses. In this case is uses the Bar component inported from from Chart.js. It is responsible for rendering the bar chart.
 
-**Props:**
+<br/>**Props:**
 ```vue
         props: {
             widgetdata: {
@@ -48,7 +48,7 @@ The components property defines the props that that the current component uses. 
 The props property defines the props that the current component accepts. Props allow parent components to pass data to child components. 
 In this instance we have the prop widgetdata which represents the data that will be displayed in the chart. We also have the prop testValue and it is used to determine the orientation of the chart(X-axis or Y-axis)
 
-**Data:**
+<br/>**Data:**
 ```vue
         data() {
             return {
@@ -80,7 +80,7 @@ The property data is not defined as an object but as a function. By doing this i
 This property returns an object that contains the components data properties.
 In this case it returns an object with the properties chartData and chartOptions. chartData for the data within the chart and chartOptions for the orientation of the chart(X-axis or Y-axis).
 
-**Watch:**
+<br/>**Watch:**
 ```vue
         watch: {
             widgetdata: {
@@ -100,7 +100,7 @@ In this case it returns an object with the properties chartData and chartOptions
 The watch property defines watchers for the props. Watchers allow the components to reactively respond to changes in the props values. 
 For both widgetdata and testValue that means that they update the chart's options based on the new prop value.
 
-**Methods:**
+<br/>**Methods:**
 ```vue
         methods: {
             updateChartOptions(testValue) {
