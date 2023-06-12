@@ -8,4 +8,5 @@ Below you can find a table of content of all documentation.
 - [Minutes of meetings](https://github.com/wocevv/Documentation/blob/main/MinutesOfMeetings.md)
 - [Sprint planning & Retrospective](https://github.com/wocevv/Documentation/blob/main/Sprint/AllSprints.md)
 - [Cultiral differences and ethics](https://github.com/wocevv/Documentation/blob/main/Ethics.md)
-- [ERD]()
+- [ERD](https://github.com/wocevv/Documentation/blob/main/ERD.md)
+- [explanation of the code](https://github.com/wocevv/Documentation/blob/main/CodeDocument.md)
