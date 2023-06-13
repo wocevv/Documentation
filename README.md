@@ -10,3 +10,4 @@ Below you can find a table of content of all documentation.
 - [Cultiral differences and ethics](https://github.com/wocevv/Documentation/blob/main/Ethics.md)
 - [ERD](https://github.com/wocevv/Documentation/blob/main/ERD.md)
 - [Explanation of the code](https://github.com/wocevv/Documentation/blob/main/CodeDocument.md)
+- [Testplan](https://github.com/wocevv/Documentation/blob/main/Testplan.md)
