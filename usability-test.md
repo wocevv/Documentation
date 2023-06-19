@@ -27,8 +27,18 @@ Because he picked line diagram though, a chart was not able to be created.
 1. Same as previous test.
 2. No colour on the ‘add widget’ button.
  
-### Tester 3 - Evalyn
+
+### Tester 3 - Evalynn
 #### Notes
-;aksndjbasjd
+Evalynn was the only tester to complete the assingment as we had hoped. She started out picking line graph which does not work but also was not mentioned in the assignment. Besides that, she picked the option products selecting laptops datamodel later on. The only issue we had here was selecting a date range that had no data. She made the distance between start and end-date around 2 weeks. 
 
 #### Errors
+1. Picked line graph again; removed it after the test.
+2. Date's were not far enough apart to get data. 
+
+### Tester 4 - Daan
+#### Notes
+Like the first two testers, Daan had picked datamodel instead of products. We are unsure if this mistake is due to bad UX design or the assignment being unclear. Furthermore, Daan also forgot to select one of the input fields. Since we have no error validation, leaving one of the boxes open and clicking create widget still makes the post request. This resulted in a 500 error and obviously no widget. 
+
+#### Errors
+1. Forgot to fill in one of the boxes resulting in an 500 error. 
