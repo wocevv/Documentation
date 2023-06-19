@@ -11,3 +11,4 @@ Below you can find a table of content of all documentation.
 - [ERD](https://github.com/wocevv/Documentation/blob/main/ERD.md)
 - [Explanation of the code](https://github.com/wocevv/Documentation/blob/main/CodeDocument.md)
 - [Testplan](https://github.com/wocevv/Documentation/blob/main/Testplan.md)
+- -[Busines processes](https://github.com/wocevv/Documentation/blob/main/Business%20processes.md)
